@@ -1,33 +1,144 @@
-.App {
-  text-align: center;
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body{
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 1.7;
+	font-size: 1rem;
+}
+hr{
+	margin:1rem;
+}
+.container{
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 0 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrap{
+	display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+	padding: 0.3rem 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logoContent{
+	background-color: #000;
+	color: #fff;
+	border-radius: 50%;
+	height:3rem;
+	width: 3rem;
+	font-size: 1.1rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoContent p{
+	margin-bottom: -0.2rem;
+}
+
+.sideMenu{
+	float: right;
+}
+
+.container .content small{
+	color: #888;
+}
+
+.cardBody{
+	border: 1px solid #888;
+	border-radius: 5px;
+}
+
+.cardBody > * {
+	padding: 0.3rem;
+}
+.body{
+	display: grid;
+	grid-template-areas: 
+	  'bodylogo    .            .'
+	  '.           bodyContent  bodyContent'
+	  '.           person       person';
+
+	min-height: 45vh;
+	background-color: rgb(247, 148, 0);
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+.bodylogo{
+	grid-area: bodylogo;
+	height: 3.5rem;
+	background-color: #000;
+	padding:0.2rem;
+	border-radius: 6px;
+	display: flex;
+	text-align:center;
+	align-items:center;
+	justify-content: center;
+	width: 3.5rem;
+}
+
+.bodyContent{
+	grid-area: bodyContent;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 0 0 0.8rem;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.person{
+	grid-area: person;
+	display: grid;
+	justify-content: right;
+	align-items: end;
+}
+.person p{
+	background-color: #fff;
+	color: rgb(247, 148, 0);
+	padding: 0.3rem;
+	max-height: 3rem;
+}
+.img{
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	background-color: #000;
+	background: url('./components/me.jpg') center center/cover;
+	margin-bottom: -0.65rem;
+	margin-left: 0.5rem;
+}
+
+.pera{
+	line-height: 1.4;
+	padding: 0;
+}
+
+.msg > *{
+	padding-left: 1rem;
+}
+
+.dev{
+	color: #888;
+}
+
+i{
+	margin-right: 0.1rem;
+}
+
+span{
+	margin-right:1.5rem;
+}
+
+.icons{
+	margin-top: 1rem;
 }
